@@ -129,6 +129,7 @@
               text="{i18n>riskSignalsTab}">
               <List
                 id="riskSignalsList"
+                noDataText="{i18n>riskSignalsEmpty}"
                 items="{riskSignals>/signals}">
                 <items>
                   <ObjectListItem
