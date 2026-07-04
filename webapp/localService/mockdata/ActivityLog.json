@@ -1,0 +1,34 @@
+[
+  {
+    "id": "A-5001",
+    "applicationId": "LA-1001",
+    "action": "Application submitted",
+    "actor": "Relationship Manager",
+    "timestamp": "2026-07-02T08:30:00Z",
+    "note": "Corporate term loan package received."
+  },
+  {
+    "id": "A-5002",
+    "applicationId": "LA-1001",
+    "action": "Risk review started",
+    "actor": "Mila Petrovic",
+    "timestamp": "2026-07-03T09:15:00Z",
+    "note": "High exposure requires collateral confirmation."
+  },
+  {
+    "id": "A-5003",
+    "applicationId": "LA-1002",
+    "action": "Approval package prepared",
+    "actor": "Igor Zivkovic",
+    "timestamp": "2026-07-03T16:40:00Z",
+    "note": "Ready for supervisor approval."
+  },
+  {
+    "id": "A-5004",
+    "applicationId": "LA-1004",
+    "action": "Documents requested",
+    "actor": "Operations Specialist",
+    "timestamp": "2026-07-04T09:00:00Z",
+    "note": "Supplier invoice is required before decision."
+  }
+]

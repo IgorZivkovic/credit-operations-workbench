@@ -8,7 +8,17 @@
       "version": "0.1.0"
     },
     "title": "{{appTitle}}",
-    "description": "{{appDescription}}"
+    "description": "{{appDescription}}",
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v2/credit-operations/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0",
+          "localUri": "localService/metadata.xml"
+        }
+      }
+    }
   },
   "sap.ui": {
     "technology": "UI5",
@@ -36,6 +46,17 @@
       "type": "XML",
       "id": "app",
       "async": true
+    },
+    "models": {
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline",
+          "useBatch": false
+        }
+      }
     },
     "routing": {
       "config": {

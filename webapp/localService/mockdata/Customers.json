@@ -1,0 +1,30 @@
+[
+  {
+    "id": "C-2001",
+    "name": "Adriatic Manufacturing Group",
+    "segment": "Corporate",
+    "country": "HR",
+    "kycStatus": "Enhanced Review"
+  },
+  {
+    "id": "C-2002",
+    "name": "Nis Retail Partners",
+    "segment": "SME",
+    "country": "RS",
+    "kycStatus": "Valid"
+  },
+  {
+    "id": "C-2003",
+    "name": "Elena Kovacs",
+    "segment": "Retail",
+    "country": "HU",
+    "kycStatus": "Valid"
+  },
+  {
+    "id": "C-2004",
+    "name": "Danube Logistics",
+    "segment": "Mid-Market",
+    "country": "RS",
+    "kycStatus": "Pending Refresh"
+  }
+]

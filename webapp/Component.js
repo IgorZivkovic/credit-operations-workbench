@@ -1,7 +1,8 @@
 sap.ui.define([
   "sap/ui/core/UIComponent",
-  "sap/ui/model/resource/ResourceModel"
-], function (UIComponent, ResourceModel) {
+  "sap/ui/model/resource/ResourceModel",
+  "./localService/mockserver"
+], function (UIComponent, ResourceModel, mockserver) {
   "use strict";
 
   return UIComponent.extend("com.igor.creditops.Component", {
@@ -10,6 +11,9 @@ sap.ui.define([
     },
 
     init: function () {
+      // Start the local OData mock backend before manifest models request metadata.
+      mockserver.init();
+
       UIComponent.prototype.init.apply(this, arguments);
 
       this.setModel(new ResourceModel({

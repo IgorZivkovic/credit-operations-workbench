@@ -2,7 +2,7 @@
 
 OpenUI5 demo application for a banking credit operations workflow.
 
-The project is being built step by step as a portfolio application. The current version contains the initial OpenUI5 application shell only; business data, mock services, worklist/detail screens, workflow actions, and tests will be added in later phases.
+The project is being built step by step as a portfolio application. The current version contains the initial OpenUI5 application shell and a local mock OData service. Worklist/detail screens, workflow actions, and tests will be added in later phases.
 
 ## Current scope
 
@@ -16,6 +16,28 @@ Added so far:
 - XML view shell with `App.view.xml` and placeholder `Home.view.xml`.
 - i18n resource bundle setup.
 - `.gitignore` for local dependencies and build output.
+- Local OData V2 mock service wired through the application manifest.
+- Mock service metadata for loan applications, customers, tasks, documents, and activity log entries.
+- Seed mock data for the credit operations workflow.
+
+## Mock data service
+
+The app uses a local UI5 `MockServer` so the frontend can be developed without a real SAP backend.
+
+Core credit operations data is exposed through:
+
+```text
+/odata/v2/credit-operations/
+```
+
+The mock service is defined in:
+
+```text
+webapp/localService/metadata.xml
+webapp/localService/mockdata/
+```
+
+This keeps the app close to a real UI5/OData setup while still being easy to run locally.
 
 ## Run locally
 
@@ -49,4 +71,4 @@ At this stage, `npm test` runs the UI5 build as a smoke test. QUnit and OPA5 tes
 
 ## Next phase
 
-The next implementation step is adding the mock OData service for credit operations data.
+The next implementation step is building the loan applications worklist.

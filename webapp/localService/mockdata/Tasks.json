@@ -1,0 +1,34 @@
+[
+  {
+    "id": "T-3001",
+    "applicationId": "LA-1001",
+    "title": "Review latest audited financial statements",
+    "status": "Open",
+    "owner": "Credit Analyst",
+    "dueAt": "2026-07-05T10:00:00Z"
+  },
+  {
+    "id": "T-3002",
+    "applicationId": "LA-1001",
+    "title": "Confirm collateral valuation",
+    "status": "Open",
+    "owner": "Risk Officer",
+    "dueAt": "2026-07-05T13:00:00Z"
+  },
+  {
+    "id": "T-3003",
+    "applicationId": "LA-1002",
+    "title": "Prepare approval recommendation",
+    "status": "In Progress",
+    "owner": "Credit Analyst",
+    "dueAt": "2026-07-06T09:30:00Z"
+  },
+  {
+    "id": "T-3004",
+    "applicationId": "LA-1004",
+    "title": "Request missing supplier invoice",
+    "status": "Open",
+    "owner": "Operations Specialist",
+    "dueAt": "2026-07-06T15:00:00Z"
+  }
+]

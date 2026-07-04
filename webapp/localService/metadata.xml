@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+  xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+  xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+  xmlns:sap="http://www.sap.com/Protocols/SAPData">
+  <edmx:DataServices m:DataServiceVersion="2.0">
+    <Schema Namespace="CreditOperations"
+      xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityType Name="LoanApplication">
+        <Key>
+          <PropertyRef Name="id"/>
+        </Key>
+        <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Application ID"/>
+        <Property Name="customerId" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Customer ID"/>
+        <Property Name="productType" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Product Type"/>
+        <Property Name="requestedAmount" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:label="Requested Amount"/>
+        <Property Name="currency" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Currency"/>
+        <Property Name="status" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Status"/>
+        <Property Name="riskLevel" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Risk Level"/>
+        <Property Name="riskScore" Type="Edm.Int32" Nullable="false" sap:label="Risk Score"/>
+        <Property Name="slaDueAt" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SLA Due At"/>
+        <Property Name="assignedTo" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Assigned To"/>
+      </EntityType>
+
+      <EntityType Name="Customer">
+        <Key>
+          <PropertyRef Name="id"/>
+        </Key>
+        <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Customer ID"/>
+        <Property Name="name" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Customer Name"/>
+        <Property Name="segment" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Segment"/>
+        <Property Name="country" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Country"/>
+        <Property Name="kycStatus" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="KYC Status"/>
+      </EntityType>
+
+      <EntityType Name="Task">
+        <Key>
+          <PropertyRef Name="id"/>
+        </Key>
+        <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Task ID"/>
+        <Property Name="applicationId" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Application ID"/>
+        <Property Name="title" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Task"/>
+        <Property Name="status" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Status"/>
+        <Property Name="owner" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Owner"/>
+        <Property Name="dueAt" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Due At"/>
+      </EntityType>
+
+      <EntityType Name="Document">
+        <Key>
+          <PropertyRef Name="id"/>
+        </Key>
+        <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Document ID"/>
+        <Property Name="applicationId" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Application ID"/>
+        <Property Name="type" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Type"/>
+        <Property Name="status" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Status"/>
+        <Property Name="uploadedAt" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Uploaded At"/>
+      </EntityType>
+
+      <EntityType Name="ActivityLogEntry">
+        <Key>
+          <PropertyRef Name="id"/>
+        </Key>
+        <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Activity ID"/>
+        <Property Name="applicationId" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Application ID"/>
+        <Property Name="action" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Action"/>
+        <Property Name="actor" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Actor"/>
+        <Property Name="timestamp" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Timestamp"/>
+        <Property Name="note" Type="Edm.String" Nullable="true" MaxLength="240" sap:label="Note"/>
+      </EntityType>
+
+      <EntityContainer Name="CreditOperationsService" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="LoanApplications" EntityType="CreditOperations.LoanApplication"/>
+        <EntitySet Name="Customers" EntityType="CreditOperations.Customer"/>
+        <EntitySet Name="Tasks" EntityType="CreditOperations.Task"/>
+        <EntitySet Name="Documents" EntityType="CreditOperations.Document"/>
+        <EntitySet Name="ActivityLog" EntityType="CreditOperations.ActivityLogEntry"/>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

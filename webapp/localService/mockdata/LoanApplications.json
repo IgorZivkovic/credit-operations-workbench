@@ -1,0 +1,50 @@
+[
+  {
+    "id": "LA-1001",
+    "customerId": "C-2001",
+    "productType": "Corporate Term Loan",
+    "requestedAmount": "2500000.00",
+    "currency": "EUR",
+    "status": "In Review",
+    "riskLevel": "High",
+    "riskScore": 82,
+    "slaDueAt": "2026-07-05T15:00:00Z",
+    "assignedTo": "Mila Petrovic"
+  },
+  {
+    "id": "LA-1002",
+    "customerId": "C-2002",
+    "productType": "SME Working Capital",
+    "requestedAmount": "450000.00",
+    "currency": "EUR",
+    "status": "Pending Approval",
+    "riskLevel": "Medium",
+    "riskScore": 58,
+    "slaDueAt": "2026-07-06T11:30:00Z",
+    "assignedTo": "Igor Zivkovic"
+  },
+  {
+    "id": "LA-1003",
+    "customerId": "C-2003",
+    "productType": "Mortgage Refinance",
+    "requestedAmount": "185000.00",
+    "currency": "EUR",
+    "status": "Approved",
+    "riskLevel": "Low",
+    "riskScore": 24,
+    "slaDueAt": "2026-07-04T16:00:00Z",
+    "assignedTo": "Ana Markovic"
+  },
+  {
+    "id": "LA-1004",
+    "customerId": "C-2004",
+    "productType": "Equipment Finance",
+    "requestedAmount": "780000.00",
+    "currency": "EUR",
+    "status": "Needs Documents",
+    "riskLevel": "Medium",
+    "riskScore": 63,
+    "slaDueAt": "2026-07-07T09:00:00Z",
+    "assignedTo": "Mila Petrovic"
+  }
+]

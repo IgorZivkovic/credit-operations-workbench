@@ -1,0 +1,30 @@
+[
+  {
+    "id": "D-4001",
+    "applicationId": "LA-1001",
+    "type": "Financial Statement",
+    "status": "Received",
+    "uploadedAt": "2026-07-02T08:45:00Z"
+  },
+  {
+    "id": "D-4002",
+    "applicationId": "LA-1001",
+    "type": "Collateral Report",
+    "status": "Pending Review",
+    "uploadedAt": "2026-07-03T12:10:00Z"
+  },
+  {
+    "id": "D-4003",
+    "applicationId": "LA-1002",
+    "type": "Bank Statement",
+    "status": "Received",
+    "uploadedAt": "2026-07-01T14:20:00Z"
+  },
+  {
+    "id": "D-4004",
+    "applicationId": "LA-1004",
+    "type": "Supplier Invoice",
+    "status": "Missing",
+    "uploadedAt": ""
+  }
+]
