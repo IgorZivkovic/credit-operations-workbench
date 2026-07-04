@@ -35,6 +35,7 @@ Added so far:
 - Separate JSON model for risk signals, simulating a REST/microservice response alongside the core OData service.
 - Risk signals tab on the detail page, filtered by the selected credit application.
 - QUnit test page for formatter logic, decision comment validation, and the reusable `RiskBadge` control.
+- OPA5 integration test page for the core approval journey.
 
 ## Mock data service
 
@@ -103,6 +104,20 @@ http://localhost:8080/test/unit/unitTests.qunit.html
 
 Current unit coverage includes amount/status formatter behavior, approval comment validation, and `RiskBadge` severity mapping.
 
+## Integration tests
+
+```powershell
+npm run test:integration
+```
+
+This opens the OPA5 browser runner at:
+
+```text
+http://localhost:8080/test/integration/opaTests.qunit.html
+```
+
+Current OPA5 coverage walks through the main user journey: load the worklist, search for a credit application, open the detail route, validate the approval dialog comment, and confirm an approval.
+
 ## Next phase
 
-The next implementation step is adding OPA5 journeys for the worklist and approval flow.
+The next implementation step is documenting the final project scope and CV positioning.

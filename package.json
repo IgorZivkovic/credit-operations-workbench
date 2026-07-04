@@ -7,7 +7,8 @@
     "start": "ui5 serve --open index.html",
     "build": "ui5 build --all",
     "test": "npm run build",
-    "test:unit": "ui5 serve --open test/unit/unitTests.qunit.html"
+    "test:unit": "ui5 serve --open test/unit/unitTests.qunit.html",
+    "test:integration": "ui5 serve --open test/integration/opaTests.qunit.html"
   },
   "devDependencies": {
     "@ui5/cli": "^4.0.57"
