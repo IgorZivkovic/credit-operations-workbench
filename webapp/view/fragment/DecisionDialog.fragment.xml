@@ -1,0 +1,37 @@
+<core:FragmentDefinition
+  xmlns:core="sap.ui.core"
+  xmlns="sap.m">
+  <Dialog
+    id="decisionDialog"
+    title="{i18n>decisionDialogTitle}"
+    contentWidth="32rem">
+    <content>
+      <VBox class="sapUiSmallMargin">
+        <Text
+          id="decisionType"
+          class="sapUiSmallMarginBottom"/>
+        <Label
+          text="{i18n>decisionCommentLabel}"
+          required="true"
+          labelFor="decisionComment"/>
+        <TextArea
+          id="decisionComment"
+          width="100%"
+          rows="5"
+          liveChange=".onDecisionCommentLiveChange"
+          placeholder="{i18n>decisionCommentPlaceholder}"/>
+      </VBox>
+    </content>
+    <beginButton>
+      <Button
+        text="{i18n>confirmDecisionButton}"
+        type="Emphasized"
+        press=".onConfirmDecision"/>
+    </beginButton>
+    <endButton>
+      <Button
+        text="{i18n>cancelButton}"
+        press=".onCancelDecision"/>
+    </endButton>
+  </Dialog>
+</core:FragmentDefinition>

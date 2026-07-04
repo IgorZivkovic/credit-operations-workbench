@@ -29,6 +29,7 @@
             <core:Item key="Pending Approval" text="{i18n>statusPendingApproval}"/>
             <core:Item key="Needs Documents" text="{i18n>statusNeedsDocuments}"/>
             <core:Item key="Approved" text="{i18n>statusApproved}"/>
+            <core:Item key="Rejected" text="{i18n>statusRejected}"/>
           </Select>
           <Label text="{i18n>riskFilterLabel}" labelFor="riskFilter"/>
           <Select

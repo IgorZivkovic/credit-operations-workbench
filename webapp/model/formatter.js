@@ -25,6 +25,7 @@ sap.ui.define([
         case "Pending Approval":
           return "Warning";
         case "Needs Documents":
+        case "Rejected":
           return "Error";
         case "In Review":
           return "Information";

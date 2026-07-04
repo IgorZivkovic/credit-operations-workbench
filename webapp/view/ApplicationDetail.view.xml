@@ -8,6 +8,16 @@
     title="{i18n>detailTitle}"
     showNavButton="true"
     navButtonPress=".onNavBack">
+    <headerContent>
+      <Button
+        text="{i18n>approveButton}"
+        type="Accept"
+        press=".onApprove"/>
+      <Button
+        text="{i18n>rejectButton}"
+        type="Reject"
+        press=".onReject"/>
+    </headerContent>
     <content>
       <VBox class="sapUiSmallMargin">
         <ObjectHeader
