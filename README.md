@@ -42,6 +42,8 @@ webapp/localService/metadata.xml
 webapp/localService/mockdata/
 ```
 
+Loan applications keep `requestedAmount` as an OData V2 decimal string for display and `requestedAmountValue` as a numeric helper field for reliable mock `$orderby` sorting.
+
 This keeps the app close to a real UI5/OData setup while still being easy to run locally.
 
 ## Run locally
