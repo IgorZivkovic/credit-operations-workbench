@@ -1,20 +1,107 @@
 <mvc:View
   controllerName="com.igor.creditops.controller.Home"
+  xmlns:core="sap.ui.core"
   xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m">
   <Page
     id="homePage"
     title="{i18n>homeTitle}">
     <content>
-      <VBox
-        class="sapUiMediumMargin"
-        renderType="Bare">
-        <Title
-          text="{i18n>homeSubtitle}"
-          level="H2"/>
-        <Text
-          class="sapUiTinyMarginTop"
-          text="{i18n>homeIntro}"/>
+      <VBox class="sapUiSmallMargin">
+        <Title text="{i18n>worklistTitle}" level="H2"/>
+        <Text text="{i18n>worklistIntro}" class="sapUiTinyMarginTop sapUiSmallMarginBottom"/>
+
+        <OverflowToolbar>
+          <SearchField
+            id="searchField"
+            width="18rem"
+            placeholder="{i18n>searchPlaceholder}"
+            search=".onSearch"
+            liveChange=".onSearch"/>
+          <ToolbarSpacer/>
+          <Label text="{i18n>statusFilterLabel}" labelFor="statusFilter"/>
+          <Select
+            id="statusFilter"
+            width="12rem"
+            change=".onFilterChange">
+            <core:Item key="" text="{i18n>filterAll}"/>
+            <core:Item key="In Review" text="{i18n>statusInReview}"/>
+            <core:Item key="Pending Approval" text="{i18n>statusPendingApproval}"/>
+            <core:Item key="Needs Documents" text="{i18n>statusNeedsDocuments}"/>
+            <core:Item key="Approved" text="{i18n>statusApproved}"/>
+          </Select>
+          <Label text="{i18n>riskFilterLabel}" labelFor="riskFilter"/>
+          <Select
+            id="riskFilter"
+            width="9rem"
+            change=".onFilterChange">
+            <core:Item key="" text="{i18n>filterAll}"/>
+            <core:Item key="High" text="{i18n>riskHigh}"/>
+            <core:Item key="Medium" text="{i18n>riskMedium}"/>
+            <core:Item key="Low" text="{i18n>riskLow}"/>
+          </Select>
+          <Label text="{i18n>sortLabel}" labelFor="sortSelect"/>
+          <Select
+            id="sortSelect"
+            width="11rem"
+            selectedKey="slaAsc"
+            change=".onSortChange">
+            <core:Item key="slaAsc" text="{i18n>sortSla}"/>
+            <core:Item key="riskDesc" text="{i18n>sortRisk}"/>
+            <core:Item key="amountDesc" text="{i18n>sortAmount}"/>
+          </Select>
+        </OverflowToolbar>
+
+        <Table
+          id="loanApplicationsTable"
+          class="sapUiSmallMarginTop"
+          mode="SingleSelectMaster"
+          growing="true"
+          growingScrollToLoad="true"
+          items="{
+            path: '/LoanApplications',
+            sorter: {
+              path: 'slaDueAt',
+              descending: false
+            }
+          }">
+          <columns>
+            <Column width="11rem">
+              <Text text="{i18n>columnApplication}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" demandPopin="true">
+              <Text text="{i18n>columnProduct}"/>
+            </Column>
+            <Column hAlign="End" minScreenWidth="Tablet" demandPopin="true">
+              <Text text="{i18n>columnAmount}"/>
+            </Column>
+            <Column minScreenWidth="Phone">
+              <Text text="{i18n>columnStatus}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" demandPopin="true">
+              <Text text="{i18n>columnRisk}"/>
+            </Column>
+            <Column minScreenWidth="Desktop" demandPopin="true">
+              <Text text="{i18n>columnAssignedTo}"/>
+            </Column>
+            <Column minScreenWidth="Desktop" demandPopin="true">
+              <Text text="{i18n>columnSla}"/>
+            </Column>
+          </columns>
+          <items>
+            <ColumnListItem type="Navigation">
+              <cells>
+                <ObjectIdentifier title="{id}" text="{customerId}"/>
+                <Text text="{productType}"/>
+                <ObjectNumber number="{path: 'requestedAmount', formatter: '.formatter.formatAmount'}" unit="{currency}"/>
+                <ObjectStatus text="{status}" state="{path: 'status', formatter: '.formatter.statusState'}"/>
+                <ObjectStatus text="{riskLevel}" state="{path: 'riskLevel', formatter: '.formatter.riskState'}"/>
+                <Text text="{assignedTo}"/>
+                <Text text="{slaDueAt}"/>
+              </cells>
+            </ColumnListItem>
+          </items>
+        </Table>
       </VBox>
     </content>
   </Page>

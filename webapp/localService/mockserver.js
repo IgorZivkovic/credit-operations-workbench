@@ -4,11 +4,16 @@ sap.ui.define([
   "use strict";
 
   var SERVICE_URL = "/odata/v2/credit-operations/";
+  var oMockServer;
 
   return {
     init: function () {
+      if (oMockServer) {
+        return;
+      }
+
       var sLocalServicePath = sap.ui.require.toUrl("com/igor/creditops/localService");
-      var oMockServer = new MockServer({
+      oMockServer = new MockServer({
         rootUri: SERVICE_URL
       });
 

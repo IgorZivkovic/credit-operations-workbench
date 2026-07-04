@@ -20,6 +20,7 @@
         <Property Name="riskScore" Type="Edm.Int32" Nullable="false" sap:label="Risk Score"/>
         <Property Name="slaDueAt" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SLA Due At"/>
         <Property Name="assignedTo" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Assigned To"/>
+        <Property Name="searchText" Type="Edm.String" Nullable="false" MaxLength="240" sap:label="Search Text"/>
       </EntityType>
 
       <EntityType Name="Customer">

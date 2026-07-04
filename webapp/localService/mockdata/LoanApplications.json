@@ -9,7 +9,8 @@
     "riskLevel": "High",
     "riskScore": 82,
     "slaDueAt": "2026-07-05T15:00:00Z",
-    "assignedTo": "Mila Petrovic"
+    "assignedTo": "Mila Petrovic",
+    "searchText": "la-1001 c-2001 corporate term loan in review high mila petrovic"
   },
   {
     "id": "LA-1002",
@@ -21,7 +22,8 @@
     "riskLevel": "Medium",
     "riskScore": 58,
     "slaDueAt": "2026-07-06T11:30:00Z",
-    "assignedTo": "Igor Zivkovic"
+    "assignedTo": "Igor Zivkovic",
+    "searchText": "la-1002 c-2002 sme working capital pending approval medium igor zivkovic"
   },
   {
     "id": "LA-1003",
@@ -33,7 +35,8 @@
     "riskLevel": "Low",
     "riskScore": 24,
     "slaDueAt": "2026-07-04T16:00:00Z",
-    "assignedTo": "Ana Markovic"
+    "assignedTo": "Ana Markovic",
+    "searchText": "la-1003 c-2003 mortgage refinance approved low ana markovic"
   },
   {
     "id": "LA-1004",
@@ -45,6 +48,7 @@
     "riskLevel": "Medium",
     "riskScore": 63,
     "slaDueAt": "2026-07-07T09:00:00Z",
-    "assignedTo": "Mila Petrovic"
+    "assignedTo": "Mila Petrovic",
+    "searchText": "la-1004 c-2004 equipment finance needs documents medium mila petrovic"
   }
 ]
