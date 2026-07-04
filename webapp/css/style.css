@@ -1,0 +1,13 @@
+.creditOpsKpiBox {
+  box-sizing: border-box;
+  min-height: 5.75rem;
+  padding: 0.875rem 1rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 0.0625rem 0.25rem rgba(34, 53, 72, 0.12);
+}
+
+.creditOpsKpiNumber {
+  margin-top: 1.25rem;
+}

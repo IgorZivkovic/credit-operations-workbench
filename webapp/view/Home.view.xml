@@ -11,6 +11,71 @@
         <Title text="{i18n>worklistTitle}" level="H2"/>
         <Text text="{i18n>worklistIntro}" class="sapUiTinyMarginTop sapUiSmallMarginBottom"/>
 
+        <HBox
+          class="sapUiSmallMarginBottom"
+          wrap="Wrap">
+          <VBox
+            class="sapUiTinyMarginEnd sapUiTinyMarginBottom"
+            width="10rem"
+            renderType="Bare">
+            <layoutData>
+              <FlexItemData styleClass="creditOpsKpiBox"/>
+            </layoutData>
+            <Label
+              text="{i18n>kpiPendingApprovals}"
+              design="Bold"/>
+            <ObjectNumber
+              class="creditOpsKpiNumber"
+              number="{kpi>/pendingApprovals}"
+              state="Warning"/>
+          </VBox>
+          <VBox
+            class="sapUiTinyMarginEnd sapUiTinyMarginBottom"
+            width="10rem"
+            renderType="Bare">
+            <layoutData>
+              <FlexItemData styleClass="creditOpsKpiBox"/>
+            </layoutData>
+            <Label
+              text="{i18n>kpiHighRisk}"
+              design="Bold"/>
+            <ObjectNumber
+              class="creditOpsKpiNumber"
+              number="{kpi>/highRisk}"
+              state="Error"/>
+          </VBox>
+          <VBox
+            class="sapUiTinyMarginEnd sapUiTinyMarginBottom"
+            width="10rem"
+            renderType="Bare">
+            <layoutData>
+              <FlexItemData styleClass="creditOpsKpiBox"/>
+            </layoutData>
+            <Label
+              text="{i18n>kpiSlaBreaches}"
+              design="Bold"/>
+            <ObjectNumber
+              class="creditOpsKpiNumber"
+              number="{kpi>/slaBreaches}"
+              state="Warning"/>
+          </VBox>
+          <VBox
+            class="sapUiTinyMarginBottom"
+            width="17rem"
+            renderType="Bare">
+            <layoutData>
+              <FlexItemData styleClass="creditOpsKpiBox"/>
+            </layoutData>
+            <Label
+              text="{i18n>kpiTotalExposure}"
+              design="Bold"/>
+            <ObjectNumber
+              class="creditOpsKpiNumber"
+              number="{kpi>/totalExposure}"
+              unit="{kpi>/currency}"/>
+          </VBox>
+        </HBox>
+
         <OverflowToolbar>
           <SearchField
             id="searchField"
@@ -18,6 +83,10 @@
             placeholder="{i18n>searchPlaceholder}"
             search=".onSearch"
             liveChange=".onSearch"/>
+          <Button
+            text="{i18n>resetFiltersButton}"
+            icon="sap-icon://reset"
+            press=".onResetFilters"/>
           <ToolbarSpacer/>
           <Label text="{i18n>statusFilterLabel}" labelFor="statusFilter"/>
           <Select

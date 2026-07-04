@@ -2,7 +2,7 @@
 
 OpenUI5 demo application for a banking credit operations workflow.
 
-The project is being built step by step as a portfolio application. The current version contains the initial OpenUI5 application shell, a local mock OData service, the loan applications worklist, a detail view for individual credit applications, a local approval workflow, and a REST-style risk signals model. Tests will be added in later phases.
+The project is being built step by step as a portfolio application. The current version contains the initial OpenUI5 application shell, a local mock OData service, the loan applications worklist with KPI summary, a detail view for individual credit applications, a local approval workflow, and a REST-style risk signals model. Tests will be added in later phases.
 
 ## Current scope
 
@@ -24,6 +24,7 @@ Added so far:
 - Status and risk filters.
 - Sorting by SLA due date, risk score, or requested amount.
 - Semantic status/risk display using reusable formatter functions.
+- Fiori-style KPI summary for pending approvals, high-risk applications, SLA breaches, and total exposure.
 - Route-based navigation from the worklist to a credit application detail page.
 - Detail page sections for application summary, customer information, tasks, documents, and activity log entries.
 - Related detail data filtered by `applicationId` from the same mock OData service.
@@ -88,4 +89,4 @@ At this stage, `npm test` runs the UI5 build as a smoke test. QUnit and OPA5 tes
 
 ## Next phase
 
-The next implementation step is adding the Fiori-style KPI summary header.
+The next implementation step is adding a reusable risk badge presentation.
