@@ -14,6 +14,7 @@
         <Property Name="customerId" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Customer ID"/>
         <Property Name="productType" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Product Type"/>
         <Property Name="requestedAmount" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:label="Requested Amount"/>
+        <Property Name="requestedAmountValue" Type="Edm.Double" Nullable="false" sap:label="Requested Amount Value"/>
         <Property Name="currency" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Currency"/>
         <Property Name="status" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Status"/>
         <Property Name="riskLevel" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Risk Level"/>

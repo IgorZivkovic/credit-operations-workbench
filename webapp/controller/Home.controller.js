@@ -58,7 +58,7 @@ sap.ui.define([
 
       switch (sSortKey) {
         case "amountDesc":
-          return new Sorter("requestedAmount", true);
+          return new Sorter("requestedAmountValue", true);
         case "riskDesc":
           return new Sorter("riskScore", true);
         case "slaAsc":
