@@ -205,5 +205,5 @@ The OPA5 tests are written as one continuous user journey. Running a single test
 
 - No real backend, database, authentication, or SAP BTP deployment.
 - Mock data is local and resets with the development server/session.
-- Theme switching is not part of the current scope; custom KPI and risk badge colors should be revisited before adding Horizon Dark support.
+- Runtime theme switching is not part of the current scope; custom KPI and risk badge styling uses UI5 theme variables so it can adapt better if another theme is introduced later.
 - The project uses JavaScript ES6 for idiomatic UI5 speed in this version, while TypeScript can be introduced later if needed.

@@ -10,6 +10,7 @@
         <Button
           icon="sap-icon://message-error"
           text="{= ${message>/}.length }"
+          tooltip="{i18n>decisionMessagesButtonTooltip}"
           type="Negative"
           visible="{= ${message>/}.length > 0 }"
           press=".onOpenDecisionMessages"/>

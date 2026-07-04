@@ -67,6 +67,7 @@
               <Table
                 id="tasksTable"
                 growing="true"
+                noDataText="{i18n>tasksNoData}"
                 items="{/Tasks}">
                 <columns>
                   <Column>
@@ -101,6 +102,7 @@
               <Table
                 id="documentsTable"
                 growing="true"
+                noDataText="{i18n>documentsNoData}"
                 items="{/Documents}">
                 <columns>
                   <Column>
@@ -155,6 +157,7 @@
               <Table
                 id="activityTable"
                 growing="true"
+                noDataText="{i18n>activityNoData}"
                 items="{/ActivityLog}">
                 <columns>
                   <Column>

@@ -9,7 +9,8 @@
     title="{i18n>homeTitle}">
     <content>
       <VBox class="sapUiSmallMargin">
-        <Title text="{i18n>worklistTitle}" level="H2"/>
+        <core:InvisibleText id="searchFieldLabel" text="{i18n>searchLabel}"/>
+        <Title id="worklistHeading" text="{i18n>worklistTitle}" level="H2"/>
         <Text text="{i18n>worklistIntro}" class="sapUiTinyMarginTop sapUiSmallMarginBottom"/>
 
         <HBox
@@ -81,6 +82,7 @@
           <SearchField
             id="searchField"
             width="18rem"
+            ariaLabelledBy="searchFieldLabel"
             placeholder="{i18n>searchPlaceholder}"
             search=".onSearch"
             liveChange=".onSearch"/>
@@ -126,9 +128,11 @@
         <Table
           id="loanApplicationsTable"
           class="sapUiSmallMarginTop"
+          ariaLabelledBy="worklistHeading"
           mode="SingleSelectMaster"
           growing="true"
           growingScrollToLoad="true"
+          noDataText="{i18n>worklistNoData}"
           itemPress=".onApplicationPress"
           items="{
             path: '/LoanApplications',
