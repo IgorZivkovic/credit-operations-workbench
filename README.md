@@ -2,7 +2,7 @@
 
 OpenUI5 demo application for a banking credit operations workflow.
 
-The project is being built step by step as a portfolio application. The current version contains the initial OpenUI5 application shell, a local mock OData service, the loan applications worklist, a detail view for individual credit applications, and a local approval workflow. Tests will be added in later phases.
+The project is being built step by step as a portfolio application. The current version contains the initial OpenUI5 application shell, a local mock OData service, the loan applications worklist, a detail view for individual credit applications, a local approval workflow, and a REST-style risk signals model. Tests will be added in later phases.
 
 ## Current scope
 
@@ -30,6 +30,8 @@ Added so far:
 - Approve/reject workflow on the detail page.
 - Required decision comment validation with UI5 `MessageManager` and `MessagePopover` integration.
 - Local status update and activity log entry creation through the mock OData model.
+- Separate JSON model for risk signals, simulating a REST/microservice response alongside the core OData service.
+- Risk signals tab on the detail page, filtered by the selected credit application.
 
 ## Mock data service
 
@@ -51,6 +53,8 @@ webapp/localService/mockdata/
 Loan applications keep `requestedAmount` as an OData V2 decimal string for display and `requestedAmountValue` as a numeric helper field for reliable mock `$orderby` sorting.
 
 This keeps the app close to a real UI5/OData setup while still being easy to run locally.
+
+Risk signals are intentionally loaded from a separate JSON model at `webapp/localService/rest/riskSignals.json` to simulate a REST-style microservice response next to the core OData service.
 
 ## Run locally
 
@@ -84,4 +88,4 @@ At this stage, `npm test` runs the UI5 build as a smoke test. QUnit and OPA5 tes
 
 ## Next phase
 
-The next implementation step is adding the separate REST-style risk signals mock model.
+The next implementation step is adding the Fiori-style KPI summary header.

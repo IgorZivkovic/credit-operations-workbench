@@ -90,6 +90,7 @@ sap.ui.define([
       var oModel = this.getView().getModel();
 
       this._filterRelatedLists(sApplicationId);
+      this._filterRiskSignals(sApplicationId);
 
       oModel.metadataLoaded().then(function () {
         this._bindApplication(sApplicationId);
@@ -137,6 +138,16 @@ sap.ui.define([
           oBinding.filter(aFilters);
         }
       }, this);
+    },
+
+    _filterRiskSignals: function (sApplicationId) {
+      var oBinding = this.byId("riskSignalsList").getBinding("items");
+
+      if (oBinding) {
+        oBinding.filter([
+          new Filter("applicationId", FilterOperator.EQ, sApplicationId)
+        ]);
+      }
     },
 
     _openDecisionDialog: function (sDecision) {

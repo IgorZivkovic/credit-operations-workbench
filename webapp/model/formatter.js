@@ -45,6 +45,19 @@ sap.ui.define([
         default:
           return "None";
       }
+    },
+
+    signalSeverityState: function (sSeverity) {
+      switch (sSeverity) {
+        case "High":
+          return "Error";
+        case "Medium":
+          return "Warning";
+        case "Low":
+          return "Success";
+        default:
+          return "None";
+      }
     }
   };
 });

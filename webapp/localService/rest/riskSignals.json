@@ -1,0 +1,88 @@
+{
+  "signals": [
+    {
+      "applicationId": "LA-1001",
+      "signalType": "Exposure",
+      "severity": "High",
+      "message": "Requested exposure exceeds standard corporate threshold.",
+      "source": "Risk Signals API"
+    },
+    {
+      "applicationId": "LA-1001",
+      "signalType": "Collateral",
+      "severity": "Medium",
+      "message": "Collateral valuation is pending final review.",
+      "source": "Collateral Service"
+    },
+    {
+      "applicationId": "LA-1002",
+      "signalType": "Cash Flow",
+      "severity": "Medium",
+      "message": "Recent operating cash flow is below peer median.",
+      "source": "Risk Signals API"
+    },
+    {
+      "applicationId": "LA-1003",
+      "signalType": "Credit History",
+      "severity": "Low",
+      "message": "Customer has strong repayment history.",
+      "source": "Credit Bureau Adapter"
+    },
+    {
+      "applicationId": "LA-1004",
+      "signalType": "Documentation",
+      "severity": "Medium",
+      "message": "Supplier invoice is missing before decision.",
+      "source": "Document Intelligence"
+    },
+    {
+      "applicationId": "LA-1005",
+      "signalType": "Counterparty",
+      "severity": "High",
+      "message": "Trade counterparty risk requires manual review.",
+      "source": "Risk Signals API"
+    },
+    {
+      "applicationId": "LA-1007",
+      "signalType": "Utilization",
+      "severity": "High",
+      "message": "Existing revolving line utilization is above 85%.",
+      "source": "Limits Service"
+    },
+    {
+      "applicationId": "LA-1008",
+      "signalType": "Receivables",
+      "severity": "Medium",
+      "message": "Debtor aging report is required for invoice financing.",
+      "source": "Document Intelligence"
+    },
+    {
+      "applicationId": "LA-1009",
+      "signalType": "Property",
+      "severity": "High",
+      "message": "Commercial property valuation variance detected.",
+      "source": "Collateral Service"
+    },
+    {
+      "applicationId": "LA-1012",
+      "signalType": "Project Risk",
+      "severity": "High",
+      "message": "Project finance exposure requires committee approval.",
+      "source": "Risk Signals API"
+    },
+    {
+      "applicationId": "LA-1014",
+      "signalType": "Sustainability",
+      "severity": "Medium",
+      "message": "Green eligibility assessment is pending.",
+      "source": "Sustainability Service"
+    },
+    {
+      "applicationId": "LA-1015",
+      "signalType": "Policy",
+      "severity": "Low",
+      "message": "Application fits low-risk micro business policy.",
+      "source": "Policy Rules API"
+    }
+  ]
+}

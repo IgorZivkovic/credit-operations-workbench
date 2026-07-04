@@ -125,6 +125,29 @@
             </IconTabFilter>
 
             <IconTabFilter
+              key="riskSignals"
+              text="{i18n>riskSignalsTab}">
+              <List
+                id="riskSignalsList"
+                items="{riskSignals>/signals}">
+                <items>
+                  <ObjectListItem
+                    title="{riskSignals>message}"
+                    intro="{riskSignals>source}">
+                    <firstStatus>
+                      <ObjectStatus
+                        text="{riskSignals>severity}"
+                        state="{path: 'riskSignals>severity', formatter: '.formatter.signalSeverityState'}"/>
+                    </firstStatus>
+                    <attributes>
+                      <ObjectAttribute title="{i18n>riskSignalType}" text="{riskSignals>signalType}"/>
+                    </attributes>
+                  </ObjectListItem>
+                </items>
+              </List>
+            </IconTabFilter>
+
+            <IconTabFilter
               key="activity"
               text="{i18n>activityTab}">
               <Table
