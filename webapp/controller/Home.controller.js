@@ -8,6 +8,8 @@ sap.ui.define([
 ], function (Controller, Filter, FilterOperator, JSONModel, Sorter, formatter) {
   "use strict";
 
+  var DEMO_REFERENCE_DATE = "2026-07-06T00:00:00Z";
+
   return Controller.extend("com.igor.creditops.controller.Home", {
     formatter: formatter,
 
@@ -20,6 +22,13 @@ sap.ui.define([
         currency: "EUR"
       }), "kpi");
 
+      this.getOwnerComponent()
+        .getRouter()
+        .getRoute("home")
+        .attachPatternMatched(this._onRouteMatched, this);
+    },
+
+    _onRouteMatched: function () {
       this.getOwnerComponent().getModel().metadataLoaded().then(this._loadKpis.bind(this));
     },
 
@@ -65,7 +74,6 @@ sap.ui.define([
       var iHighRisk = 0;
       var iSlaBreaches = 0;
       var fTotalExposure = 0;
-      var sReferenceDate = "2026-07-06T00:00:00Z";
 
       aApplications.forEach(function (oApplication) {
         if (oApplication.status === "Pending Approval") {
@@ -76,7 +84,8 @@ sap.ui.define([
           iHighRisk += 1;
         }
 
-        if (oApplication.status !== "Approved" && oApplication.slaDueAt < sReferenceDate) {
+        // Keep the mock KPI stable for screenshots and demos built around the seeded July 2026 data.
+        if (oApplication.status !== "Approved" && oApplication.slaDueAt < DEMO_REFERENCE_DATE) {
           iSlaBreaches += 1;
         }
 
