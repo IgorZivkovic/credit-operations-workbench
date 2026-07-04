@@ -25,6 +25,7 @@ Added so far:
 - Sorting by SLA due date, risk score, or requested amount.
 - Semantic status/risk display using reusable formatter functions.
 - Fiori-style KPI summary for pending approvals, high-risk applications, SLA breaches, and total exposure.
+- Reusable `RiskBadge` control for semantic Low/Medium/High risk presentation.
 - Route-based navigation from the worklist to a credit application detail page.
 - Detail page sections for application summary, customer information, tasks, documents, and activity log entries.
 - Related detail data filtered by `applicationId` from the same mock OData service.

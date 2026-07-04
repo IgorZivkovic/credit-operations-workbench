@@ -1,5 +1,6 @@
 <mvc:View
   controllerName="com.igor.creditops.controller.Home"
+  xmlns:credit="com.igor.creditops.control"
   xmlns:core="sap.ui.core"
   xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m">
@@ -166,7 +167,7 @@
                 <Text text="{productType}"/>
                 <ObjectNumber number="{path: 'requestedAmount', formatter: '.formatter.formatAmount'}" unit="{currency}"/>
                 <ObjectStatus text="{status}" state="{path: 'status', formatter: '.formatter.statusState'}"/>
-                <ObjectStatus text="{riskLevel}" state="{path: 'riskLevel', formatter: '.formatter.riskState'}"/>
+                <credit:RiskBadge text="{riskLevel}" severity="{riskLevel}"/>
                 <Text text="{assignedTo}"/>
                 <Text text="{slaDueAt}"/>
               </cells>

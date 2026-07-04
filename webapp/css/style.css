@@ -11,3 +11,39 @@
 .creditOpsKpiNumber {
   margin-top: 1.25rem;
 }
+
+.creditOpsRiskBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4.25rem;
+  padding: 0.125rem 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+.creditOpsRiskBadge .sapMObjStatusText {
+  font-weight: 600;
+}
+
+.creditOpsRiskBadgeLow {
+  border-color: #b8dfc3;
+  background: #edf8ef;
+}
+
+.creditOpsRiskBadgeMedium {
+  border-color: #ffd7a8;
+  background: #fff4e5;
+}
+
+.creditOpsRiskBadgeHigh {
+  border-color: #ffb8b8;
+  background: #ffecec;
+}
+
+.creditOpsRiskBadgeNone {
+  border-color: #d9d9d9;
+  background: #f7f7f7;
+}

@@ -32,32 +32,6 @@ sap.ui.define([
         default:
           return "None";
       }
-    },
-
-    riskState: function (sRiskLevel) {
-      switch (sRiskLevel) {
-        case "Low":
-          return "Success";
-        case "Medium":
-          return "Warning";
-        case "High":
-          return "Error";
-        default:
-          return "None";
-      }
-    },
-
-    signalSeverityState: function (sSeverity) {
-      switch (sSeverity) {
-        case "High":
-          return "Error";
-        case "Medium":
-          return "Warning";
-        case "Low":
-          return "Success";
-        default:
-          return "None";
-      }
     }
   };
 });

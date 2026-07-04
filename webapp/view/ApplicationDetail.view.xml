@@ -1,5 +1,6 @@
 <mvc:View
   controllerName="com.igor.creditops.controller.ApplicationDetail"
+  xmlns:credit="com.igor.creditops.control"
   xmlns:form="sap.ui.layout.form"
   xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m">
@@ -27,7 +28,7 @@
           numberUnit="{currency}">
           <statuses>
             <ObjectStatus text="{status}" state="{path: 'status', formatter: '.formatter.statusState'}"/>
-            <ObjectStatus text="{riskLevel}" state="{path: 'riskLevel', formatter: '.formatter.riskState'}"/>
+            <credit:RiskBadge text="{riskLevel}" severity="{riskLevel}"/>
           </statuses>
           <attributes>
             <ObjectAttribute title="{i18n>detailAssignedTo}" text="{assignedTo}"/>
@@ -136,9 +137,9 @@
                     title="{riskSignals>message}"
                     intro="{riskSignals>source}">
                     <firstStatus>
-                      <ObjectStatus
+                      <credit:RiskBadge
                         text="{riskSignals>severity}"
-                        state="{path: 'riskSignals>severity', formatter: '.formatter.signalSeverityState'}"/>
+                        severity="{riskSignals>severity}"/>
                     </firstStatus>
                     <attributes>
                       <ObjectAttribute title="{i18n>riskSignalType}" text="{riskSignals>signalType}"/>
