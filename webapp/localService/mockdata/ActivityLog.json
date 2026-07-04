@@ -24,11 +24,107 @@
     "note": "Ready for supervisor approval."
   },
   {
+    "id": "A-5016",
+    "applicationId": "LA-1003",
+    "action": "Application approved",
+    "actor": "Ana Markovic",
+    "timestamp": "2026-07-04T12:00:00Z",
+    "note": "Mortgage refinance approved under low-risk policy."
+  },
+  {
     "id": "A-5004",
     "applicationId": "LA-1004",
     "action": "Documents requested",
     "actor": "Operations Specialist",
     "timestamp": "2026-07-04T09:00:00Z",
     "note": "Supplier invoice is required before decision."
+  },
+  {
+    "id": "A-5005",
+    "applicationId": "LA-1005",
+    "action": "Trade finance review started",
+    "actor": "Nikola Jovanovic",
+    "timestamp": "2026-07-03T10:30:00Z",
+    "note": "Exposure and counterparty checks opened."
+  },
+  {
+    "id": "A-5006",
+    "applicationId": "LA-1006",
+    "action": "Application approved",
+    "actor": "Ana Markovic",
+    "timestamp": "2026-07-04T12:15:00Z",
+    "note": "Low-risk consumer loan approved."
+  },
+  {
+    "id": "A-5007",
+    "applicationId": "LA-1007",
+    "action": "Approval requested",
+    "actor": "Igor Zivkovic",
+    "timestamp": "2026-07-03T17:20:00Z",
+    "note": "Credit line package sent to supervisor."
+  },
+  {
+    "id": "A-5008",
+    "applicationId": "LA-1008",
+    "action": "Missing document flagged",
+    "actor": "Sara Kovacevic",
+    "timestamp": "2026-07-04T08:55:00Z",
+    "note": "Debtor aging report requested from customer."
+  },
+  {
+    "id": "A-5009",
+    "applicationId": "LA-1009",
+    "action": "Risk review escalated",
+    "actor": "Mila Petrovic",
+    "timestamp": "2026-07-04T09:25:00Z",
+    "note": "Commercial mortgage requires valuation review."
+  },
+  {
+    "id": "A-5010",
+    "applicationId": "LA-1010",
+    "action": "Cash flow review started",
+    "actor": "Nikola Jovanovic",
+    "timestamp": "2026-07-03T11:45:00Z",
+    "note": "Seasonality risk under review."
+  },
+  {
+    "id": "A-5011",
+    "applicationId": "LA-1011",
+    "action": "Renewal approved",
+    "actor": "Sara Kovacevic",
+    "timestamp": "2026-07-04T10:20:00Z",
+    "note": "Existing overdraft renewed within policy."
+  },
+  {
+    "id": "A-5012",
+    "applicationId": "LA-1012",
+    "action": "Committee review required",
+    "actor": "Mila Petrovic",
+    "timestamp": "2026-07-04T14:10:00Z",
+    "note": "Project finance exposure exceeds standard threshold."
+  },
+  {
+    "id": "A-5013",
+    "applicationId": "LA-1013",
+    "action": "Document gap identified",
+    "actor": "Igor Zivkovic",
+    "timestamp": "2026-07-04T13:35:00Z",
+    "note": "Exit strategy must be refreshed before decision."
+  },
+  {
+    "id": "A-5014",
+    "applicationId": "LA-1014",
+    "action": "Sustainability check opened",
+    "actor": "Ana Markovic",
+    "timestamp": "2026-07-03T15:50:00Z",
+    "note": "Green eligibility documentation under review."
+  },
+  {
+    "id": "A-5015",
+    "applicationId": "LA-1015",
+    "action": "Application approved",
+    "actor": "Sara Kovacevic",
+    "timestamp": "2026-07-04T14:45:00Z",
+    "note": "Micro business loan approved under low-risk rules."
   }
 ]

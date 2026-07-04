@@ -22,6 +22,15 @@ sap.ui.define([
       this._applyTableState();
     },
 
+    onApplicationPress: function (oEvent) {
+      var oItem = oEvent.getParameter("listItem");
+      var sApplicationId = oItem.getBindingContext().getProperty("id");
+
+      this.getOwnerComponent().getRouter().navTo("applicationDetail", {
+        applicationId: encodeURIComponent(sApplicationId)
+      });
+    },
+
     _applyTableState: function () {
       var oTable = this.byId("loanApplicationsTable");
       var oBinding = oTable.getBinding("items");

@@ -73,12 +73,21 @@
           "name": "home",
           "pattern": "",
           "target": "home"
+        },
+        {
+          "name": "applicationDetail",
+          "pattern": "applications/{applicationId}",
+          "target": "applicationDetail"
         }
       ],
       "targets": {
         "home": {
           "id": "home",
           "name": "Home"
+        },
+        "applicationDetail": {
+          "id": "applicationDetail",
+          "name": "ApplicationDetail"
         }
       }
     }

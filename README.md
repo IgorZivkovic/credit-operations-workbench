@@ -2,7 +2,7 @@
 
 OpenUI5 demo application for a banking credit operations workflow.
 
-The project is being built step by step as a portfolio application. The current version contains the initial OpenUI5 application shell, a local mock OData service, and the first loan applications worklist. Detail screens, workflow actions, and tests will be added in later phases.
+The project is being built step by step as a portfolio application. The current version contains the initial OpenUI5 application shell, a local mock OData service, the loan applications worklist, and a detail view for individual credit applications. Workflow actions and tests will be added in later phases.
 
 ## Current scope
 
@@ -24,6 +24,9 @@ Added so far:
 - Status and risk filters.
 - Sorting by SLA due date, risk score, or requested amount.
 - Semantic status/risk display using reusable formatter functions.
+- Route-based navigation from the worklist to a credit application detail page.
+- Detail page sections for application summary, customer information, tasks, documents, and activity log entries.
+- Related detail data filtered by `applicationId` from the same mock OData service.
 
 ## Mock data service
 
@@ -78,4 +81,4 @@ At this stage, `npm test` runs the UI5 build as a smoke test. QUnit and OPA5 tes
 
 ## Next phase
 
-The next implementation step is adding the credit application detail view.
+The next implementation step is adding the approval workflow with validation.

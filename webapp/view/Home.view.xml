@@ -58,6 +58,7 @@
           mode="SingleSelectMaster"
           growing="true"
           growingScrollToLoad="true"
+          itemPress=".onApplicationPress"
           items="{
             path: '/LoanApplications',
             sorter: {

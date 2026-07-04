@@ -24,11 +24,107 @@
     "dueAt": "2026-07-06T09:30:00Z"
   },
   {
+    "id": "T-3016",
+    "applicationId": "LA-1003",
+    "title": "Archive approved refinance package",
+    "status": "Completed",
+    "owner": "Operations Specialist",
+    "dueAt": "2026-07-04T15:30:00Z"
+  },
+  {
     "id": "T-3004",
     "applicationId": "LA-1004",
     "title": "Request missing supplier invoice",
     "status": "Open",
     "owner": "Operations Specialist",
     "dueAt": "2026-07-06T15:00:00Z"
+  },
+  {
+    "id": "T-3005",
+    "applicationId": "LA-1005",
+    "title": "Review trade flow exposure",
+    "status": "Open",
+    "owner": "Risk Officer",
+    "dueAt": "2026-07-05T16:00:00Z"
+  },
+  {
+    "id": "T-3006",
+    "applicationId": "LA-1006",
+    "title": "Confirm income verification",
+    "status": "Completed",
+    "owner": "Credit Analyst",
+    "dueAt": "2026-07-04T11:00:00Z"
+  },
+  {
+    "id": "T-3007",
+    "applicationId": "LA-1007",
+    "title": "Validate credit line utilization",
+    "status": "In Progress",
+    "owner": "Credit Analyst",
+    "dueAt": "2026-07-06T13:30:00Z"
+  },
+  {
+    "id": "T-3008",
+    "applicationId": "LA-1008",
+    "title": "Request debtor aging report",
+    "status": "Open",
+    "owner": "Operations Specialist",
+    "dueAt": "2026-07-07T10:00:00Z"
+  },
+  {
+    "id": "T-3009",
+    "applicationId": "LA-1009",
+    "title": "Review property valuation",
+    "status": "Open",
+    "owner": "Risk Officer",
+    "dueAt": "2026-07-05T09:00:00Z"
+  },
+  {
+    "id": "T-3010",
+    "applicationId": "LA-1010",
+    "title": "Check seasonal cash flow forecast",
+    "status": "In Progress",
+    "owner": "Credit Analyst",
+    "dueAt": "2026-07-06T08:00:00Z"
+  },
+  {
+    "id": "T-3011",
+    "applicationId": "LA-1011",
+    "title": "Confirm renewal limits",
+    "status": "Completed",
+    "owner": "Credit Analyst",
+    "dueAt": "2026-07-04T10:00:00Z"
+  },
+  {
+    "id": "T-3012",
+    "applicationId": "LA-1012",
+    "title": "Schedule project risk committee review",
+    "status": "Open",
+    "owner": "Risk Officer",
+    "dueAt": "2026-07-08T09:00:00Z"
+  },
+  {
+    "id": "T-3013",
+    "applicationId": "LA-1013",
+    "title": "Request updated exit strategy",
+    "status": "Open",
+    "owner": "Operations Specialist",
+    "dueAt": "2026-07-07T14:00:00Z"
+  },
+  {
+    "id": "T-3014",
+    "applicationId": "LA-1014",
+    "title": "Confirm green project eligibility",
+    "status": "In Progress",
+    "owner": "Credit Analyst",
+    "dueAt": "2026-07-06T15:30:00Z"
+  },
+  {
+    "id": "T-3015",
+    "applicationId": "LA-1015",
+    "title": "Prepare automated approval note",
+    "status": "Completed",
+    "owner": "Credit Analyst",
+    "dueAt": "2026-07-04T14:00:00Z"
   }
 ]

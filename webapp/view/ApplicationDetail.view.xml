@@ -1,0 +1,155 @@
+<mvc:View
+  controllerName="com.igor.creditops.controller.ApplicationDetail"
+  xmlns:form="sap.ui.layout.form"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+  <Page
+    id="applicationDetailPage"
+    title="{i18n>detailTitle}"
+    showNavButton="true"
+    navButtonPress=".onNavBack">
+    <content>
+      <VBox class="sapUiSmallMargin">
+        <ObjectHeader
+          title="{id}"
+          intro="{productType}"
+          number="{path: 'requestedAmount', formatter: '.formatter.formatAmount'}"
+          numberUnit="{currency}">
+          <statuses>
+            <ObjectStatus text="{status}" state="{path: 'status', formatter: '.formatter.statusState'}"/>
+            <ObjectStatus text="{riskLevel}" state="{path: 'riskLevel', formatter: '.formatter.riskState'}"/>
+          </statuses>
+          <attributes>
+            <ObjectAttribute title="{i18n>detailAssignedTo}" text="{assignedTo}"/>
+            <ObjectAttribute title="{i18n>detailSlaDue}" text="{slaDueAt}"/>
+            <ObjectAttribute title="{i18n>detailRiskScore}" text="{riskScore}"/>
+          </attributes>
+        </ObjectHeader>
+
+        <Panel
+          id="customerPanel"
+          class="sapUiSmallMarginTop"
+          headerText="{i18n>customerSectionTitle}">
+          <content>
+            <form:SimpleForm
+              editable="false"
+              layout="ResponsiveGridLayout">
+              <Label text="{i18n>customerName}"/>
+              <Text text="{name}"/>
+              <Label text="{i18n>customerSegment}"/>
+              <Text text="{segment}"/>
+              <Label text="{i18n>customerCountry}"/>
+              <Text text="{country}"/>
+              <Label text="{i18n>customerKycStatus}"/>
+              <ObjectStatus text="{kycStatus}"/>
+            </form:SimpleForm>
+          </content>
+        </Panel>
+
+        <IconTabBar
+          class="sapUiSmallMarginTop"
+          expandable="false">
+          <items>
+            <IconTabFilter
+              key="tasks"
+              text="{i18n>tasksTab}">
+              <Table
+                id="tasksTable"
+                growing="true"
+                items="{/Tasks}">
+                <columns>
+                  <Column>
+                    <Text text="{i18n>taskTitleColumn}"/>
+                  </Column>
+                  <Column minScreenWidth="Tablet" demandPopin="true">
+                    <Text text="{i18n>taskOwnerColumn}"/>
+                  </Column>
+                  <Column minScreenWidth="Tablet" demandPopin="true">
+                    <Text text="{i18n>taskDueColumn}"/>
+                  </Column>
+                  <Column minScreenWidth="Phone">
+                    <Text text="{i18n>taskStatusColumn}"/>
+                  </Column>
+                </columns>
+                <items>
+                  <ColumnListItem>
+                    <cells>
+                      <Text text="{title}"/>
+                      <Text text="{owner}"/>
+                      <Text text="{dueAt}"/>
+                      <ObjectStatus text="{status}"/>
+                    </cells>
+                  </ColumnListItem>
+                </items>
+              </Table>
+            </IconTabFilter>
+
+            <IconTabFilter
+              key="documents"
+              text="{i18n>documentsTab}">
+              <Table
+                id="documentsTable"
+                growing="true"
+                items="{/Documents}">
+                <columns>
+                  <Column>
+                    <Text text="{i18n>documentTypeColumn}"/>
+                  </Column>
+                  <Column minScreenWidth="Tablet" demandPopin="true">
+                    <Text text="{i18n>documentUploadedColumn}"/>
+                  </Column>
+                  <Column minScreenWidth="Phone">
+                    <Text text="{i18n>documentStatusColumn}"/>
+                  </Column>
+                </columns>
+                <items>
+                  <ColumnListItem>
+                    <cells>
+                      <Text text="{type}"/>
+                      <Text text="{uploadedAt}"/>
+                      <ObjectStatus text="{status}"/>
+                    </cells>
+                  </ColumnListItem>
+                </items>
+              </Table>
+            </IconTabFilter>
+
+            <IconTabFilter
+              key="activity"
+              text="{i18n>activityTab}">
+              <Table
+                id="activityTable"
+                growing="true"
+                items="{/ActivityLog}">
+                <columns>
+                  <Column>
+                    <Text text="{i18n>activityActionColumn}"/>
+                  </Column>
+                  <Column minScreenWidth="Tablet" demandPopin="true">
+                    <Text text="{i18n>activityActorColumn}"/>
+                  </Column>
+                  <Column minScreenWidth="Tablet" demandPopin="true">
+                    <Text text="{i18n>activityTimeColumn}"/>
+                  </Column>
+                  <Column minScreenWidth="Desktop" demandPopin="true">
+                    <Text text="{i18n>activityNoteColumn}"/>
+                  </Column>
+                </columns>
+                <items>
+                  <ColumnListItem>
+                    <cells>
+                      <Text text="{action}"/>
+                      <Text text="{actor}"/>
+                      <Text text="{timestamp}"/>
+                      <Text text="{note}"/>
+                    </cells>
+                  </ColumnListItem>
+                </items>
+              </Table>
+            </IconTabFilter>
+          </items>
+        </IconTabBar>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

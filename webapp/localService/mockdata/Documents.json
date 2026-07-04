@@ -21,10 +21,94 @@
     "uploadedAt": "2026-07-01T14:20:00Z"
   },
   {
+    "id": "D-4016",
+    "applicationId": "LA-1003",
+    "type": "Mortgage Agreement",
+    "status": "Received",
+    "uploadedAt": "2026-07-02T10:05:00Z"
+  },
+  {
     "id": "D-4004",
     "applicationId": "LA-1004",
     "type": "Supplier Invoice",
     "status": "Missing",
     "uploadedAt": ""
+  },
+  {
+    "id": "D-4005",
+    "applicationId": "LA-1005",
+    "type": "Trade Contract",
+    "status": "Received",
+    "uploadedAt": "2026-07-03T10:15:00Z"
+  },
+  {
+    "id": "D-4006",
+    "applicationId": "LA-1006",
+    "type": "Income Statement",
+    "status": "Received",
+    "uploadedAt": "2026-07-02T11:00:00Z"
+  },
+  {
+    "id": "D-4007",
+    "applicationId": "LA-1007",
+    "type": "Utilization Report",
+    "status": "Pending Review",
+    "uploadedAt": "2026-07-03T15:25:00Z"
+  },
+  {
+    "id": "D-4008",
+    "applicationId": "LA-1008",
+    "type": "Debtor Aging Report",
+    "status": "Missing",
+    "uploadedAt": ""
+  },
+  {
+    "id": "D-4009",
+    "applicationId": "LA-1009",
+    "type": "Property Valuation",
+    "status": "Pending Review",
+    "uploadedAt": "2026-07-04T08:45:00Z"
+  },
+  {
+    "id": "D-4010",
+    "applicationId": "LA-1010",
+    "type": "Cash Flow Forecast",
+    "status": "Received",
+    "uploadedAt": "2026-07-03T09:10:00Z"
+  },
+  {
+    "id": "D-4011",
+    "applicationId": "LA-1011",
+    "type": "Facility Agreement",
+    "status": "Received",
+    "uploadedAt": "2026-07-02T16:35:00Z"
+  },
+  {
+    "id": "D-4012",
+    "applicationId": "LA-1012",
+    "type": "Project Business Case",
+    "status": "Received",
+    "uploadedAt": "2026-07-03T13:40:00Z"
+  },
+  {
+    "id": "D-4013",
+    "applicationId": "LA-1013",
+    "type": "Exit Strategy",
+    "status": "Missing",
+    "uploadedAt": ""
+  },
+  {
+    "id": "D-4014",
+    "applicationId": "LA-1014",
+    "type": "Sustainability Assessment",
+    "status": "Pending Review",
+    "uploadedAt": "2026-07-03T12:05:00Z"
+  },
+  {
+    "id": "D-4015",
+    "applicationId": "LA-1015",
+    "type": "Tax Registration",
+    "status": "Received",
+    "uploadedAt": "2026-07-01T10:30:00Z"
   }
 ]

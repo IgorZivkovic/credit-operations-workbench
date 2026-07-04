@@ -26,5 +26,82 @@
     "segment": "Mid-Market",
     "country": "RS",
     "kycStatus": "Pending Refresh"
+  },
+  {
+    "id": "C-2005",
+    "name": "Baltic Export Services",
+    "segment": "Corporate",
+    "country": "PL",
+    "kycStatus": "Enhanced Review"
+  },
+  {
+    "id": "C-2006",
+    "name": "Marko Ilic",
+    "segment": "Retail",
+    "country": "RS",
+    "kycStatus": "Valid"
+  },
+  {
+    "id": "C-2007",
+    "name": "Central Wholesale Network",
+    "segment": "Mid-Market",
+    "country": "HU",
+    "kycStatus": "Valid"
+  },
+  {
+    "id": "C-2008",
+    "name": "QuickPay Distribution",
+    "segment": "SME",
+    "country": "RS",
+    "kycStatus": "Pending Refresh"
+  },
+  {
+    "id": "C-2009",
+    "name": "Blue Tower Properties",
+    "segment": "Corporate",
+    "country": "AT",
+    "kycStatus": "Enhanced Review"
+  },
+  {
+    "id": "C-2010",
+    "name": "Pannon Farms Cooperative",
+    "segment": "SME",
+    "country": "HU",
+    "kycStatus": "Valid"
+  },
+  {
+    "id": "C-2011",
+    "name": "Urban Services Ltd",
+    "segment": "SME",
+    "country": "RS",
+    "kycStatus": "Valid"
+  },
+  {
+    "id": "C-2012",
+    "name": "Solar Grid Ventures",
+    "segment": "Corporate",
+    "country": "DE",
+    "kycStatus": "Enhanced Review"
+  },
+  {
+    "id": "C-2013",
+    "name": "Riverfront Development",
+    "segment": "Mid-Market",
+    "country": "HR",
+    "kycStatus": "Pending Refresh"
+  },
+  {
+    "id": "C-2014",
+    "name": "Green Energy Partners",
+    "segment": "Corporate",
+    "country": "SI",
+    "kycStatus": "Valid"
+  },
+  {
+    "id": "C-2015",
+    "name": "Mina Bakery",
+    "segment": "Micro Business",
+    "country": "RS",
+    "kycStatus": "Valid"
   }
 ]
