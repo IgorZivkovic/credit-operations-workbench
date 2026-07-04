@@ -1,0 +1,21 @@
+<mvc:View
+  controllerName="com.igor.creditops.controller.Home"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+  <Page
+    id="homePage"
+    title="{i18n>homeTitle}">
+    <content>
+      <VBox
+        class="sapUiMediumMargin"
+        renderType="Bare">
+        <Title
+          text="{i18n>homeSubtitle}"
+          level="H2"/>
+        <Text
+          class="sapUiTinyMarginTop"
+          text="{i18n>homeIntro}"/>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

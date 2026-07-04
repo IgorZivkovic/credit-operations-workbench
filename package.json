@@ -1,0 +1,14 @@
+{
+  "name": "credit-operations-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "description": "OpenUI5 demo app for banking credit operations.",
+  "scripts": {
+    "start": "ui5 serve --open index.html",
+    "build": "ui5 build --all",
+    "test": "npm run build"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^4.0.57"
+  }
+}
