@@ -34,6 +34,7 @@ Added so far:
 - Local status update and activity log entry creation through the mock OData model.
 - Separate JSON model for risk signals, simulating a REST/microservice response alongside the core OData service.
 - Risk signals tab on the detail page, filtered by the selected credit application.
+- QUnit test page for formatter logic, decision comment validation, and the reusable `RiskBadge` control.
 
 ## Mock data service
 
@@ -86,8 +87,22 @@ Do not open `webapp/index.html` directly from the file system. UI5 apps should r
 npm test
 ```
 
-At this stage, `npm test` runs the UI5 build as a smoke test. QUnit and OPA5 tests will be added after the core screens and workflow are implemented.
+`npm test` runs the UI5 build as a smoke test.
+
+## Unit tests
+
+```powershell
+npm run test:unit
+```
+
+This opens the QUnit browser runner at:
+
+```text
+http://localhost:8080/test/unit/unitTests.qunit.html
+```
+
+Current unit coverage includes amount/status formatter behavior, approval comment validation, and `RiskBadge` severity mapping.
 
 ## Next phase
 
-The next implementation step is adding a reusable risk badge presentation.
+The next implementation step is adding OPA5 journeys for the worklist and approval flow.

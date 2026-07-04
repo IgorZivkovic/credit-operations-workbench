@@ -10,6 +10,7 @@ sap.ui.define([
   "sap/m/MessageItem",
   "sap/m/MessagePopover",
   "sap/m/MessageToast",
+  "../model/decisionValidation",
   "../model/formatter"
 ], function (
   Controller,
@@ -23,6 +24,7 @@ sap.ui.define([
   MessageItem,
   MessagePopover,
   MessageToast,
+  decisionValidation,
   formatter
 ) {
   "use strict";
@@ -183,7 +185,7 @@ sap.ui.define([
 
     _validateDecisionComment: function () {
       var oTextArea = this.byId("decisionComment");
-      var bValid = Boolean(oTextArea.getValue().trim());
+      var bValid = decisionValidation.isDecisionCommentValid(oTextArea.getValue());
 
       oTextArea.setValueState(bValid ? "None" : "Error");
       oTextArea.setValueStateText(bValid ? "" : this.getResourceBundle().getText("decisionCommentRequired"));
