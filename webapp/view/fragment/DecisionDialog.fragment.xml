@@ -7,9 +7,15 @@
     contentWidth="32rem">
     <content>
       <VBox class="sapUiSmallMargin">
+        <Button
+          icon="sap-icon://message-error"
+          text="{= ${message>/}.length }"
+          type="Negative"
+          visible="{= ${message>/}.length > 0 }"
+          press=".onOpenDecisionMessages"/>
         <Text
           id="decisionType"
-          class="sapUiSmallMarginBottom"/>
+          class="sapUiSmallMarginTop sapUiSmallMarginBottom"/>
         <Label
           text="{i18n>decisionCommentLabel}"
           required="true"

@@ -28,7 +28,7 @@ Added so far:
 - Detail page sections for application summary, customer information, tasks, documents, and activity log entries.
 - Related detail data filtered by `applicationId` from the same mock OData service.
 - Approve/reject workflow on the detail page.
-- Required decision comment validation with UI5 `MessageManager` integration.
+- Required decision comment validation with UI5 `MessageManager` and `MessagePopover` integration.
 - Local status update and activity log entry creation through the mock OData model.
 
 ## Mock data service

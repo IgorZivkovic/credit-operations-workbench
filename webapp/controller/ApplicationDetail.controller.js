@@ -2,13 +2,29 @@ sap.ui.define([
   "sap/ui/core/mvc/Controller",
   "sap/ui/core/Fragment",
   "sap/ui/core/message/Message",
+  "sap/ui/core/Messaging",
   "sap/ui/core/library",
   "sap/ui/model/Filter",
   "sap/ui/model/FilterOperator",
   "sap/m/MessageBox",
+  "sap/m/MessageItem",
+  "sap/m/MessagePopover",
   "sap/m/MessageToast",
   "../model/formatter"
-], function (Controller, Fragment, Message, coreLibrary, Filter, FilterOperator, MessageBox, MessageToast, formatter) {
+], function (
+  Controller,
+  Fragment,
+  Message,
+  Messaging,
+  coreLibrary,
+  Filter,
+  FilterOperator,
+  MessageBox,
+  MessageItem,
+  MessagePopover,
+  MessageToast,
+  formatter
+) {
   "use strict";
 
   var MessageType = coreLibrary.MessageType;
@@ -17,8 +33,9 @@ sap.ui.define([
     formatter: formatter,
 
     onInit: function () {
-      this._oMessageManager = sap.ui.getCore().getMessageManager();
+      this._oMessageManager = Messaging;
       this._oMessageManager.registerObject(this.getView(), true);
+      this.getView().setModel(this._oMessageManager.getMessageModel(), "message");
 
       this.getOwnerComponent()
         .getRouter()
@@ -60,7 +77,12 @@ sap.ui.define([
     },
 
     onCancelDecision: function () {
+      this._clearDecisionValidationMessage();
       this._oDecisionDialog.close();
+    },
+
+    onOpenDecisionMessages: function (oEvent) {
+      this._getDecisionMessagePopover().openBy(oEvent.getSource());
     },
 
     _onRouteMatched: function (oEvent) {
@@ -124,11 +146,11 @@ sap.ui.define([
         this.byId("decisionType").setText(this.getResourceBundle().getText(
           sDecision === "Approved" ? "approveDialogTitle" : "rejectDialogTitle"
         ));
-      this.byId("decisionComment").setValue("");
-      this.byId("decisionComment").setValueState("None");
-      this.byId("decisionComment").setValueStateText("");
-      this._clearDecisionValidationMessage();
-      oDialog.open();
+        this.byId("decisionComment").setValue("");
+        this.byId("decisionComment").setValueState("None");
+        this.byId("decisionComment").setValueStateText("");
+        this._clearDecisionValidationMessage();
+        oDialog.open();
       }.bind(this));
     },
 
@@ -174,6 +196,24 @@ sap.ui.define([
         this._oMessageManager.removeMessages(this._oDecisionCommentMessage);
         this._oDecisionCommentMessage = null;
       }
+    },
+
+    _getDecisionMessagePopover: function () {
+      if (!this._oDecisionMessagePopover) {
+        this._oDecisionMessagePopover = new MessagePopover({
+          items: {
+            path: "message>/",
+            template: new MessageItem({
+              type: "{message>type}",
+              title: "{message>message}",
+              description: "{message>description}"
+            })
+          }
+        });
+        this.getView().addDependent(this._oDecisionMessagePopover);
+      }
+
+      return this._oDecisionMessagePopover;
     },
 
     _addLocalActivityEntry: function (sDecision, sComment) {
